@@ -1,16 +1,17 @@
 ﻿using UnityEngine;
+using UnityEngine.Serialization;
 
 public class ShroudTile : MonoBehaviour
 {
-	public Renderer renderer;
+	[FormerlySerializedAs("renderer")] public Renderer shroudRenderer;
 
 	private void OnEnable()
 	{
-		renderer.enabled = true;
+		shroudRenderer.enabled = true;
 	}
 
 	public void SetShroudStatus(bool enabled)
 	{
-		renderer.enabled = enabled;
+		shroudRenderer.enabled = enabled;
 	}
 }
