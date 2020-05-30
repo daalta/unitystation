@@ -11,7 +11,7 @@ using Random = UnityEngine.Random;
 public class CloningConsole : MonoBehaviour, IServerSpawn
 {
 	public delegate void ChangeEvent();
-	public static event ChangeEvent changeEvent; // TODO Is this warning true?
+	public static event ChangeEvent changeEvent { add { } remove { } }
 
 	private List<CloningRecord> cloningRecords = new List<CloningRecord>();
 

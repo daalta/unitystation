@@ -7,13 +7,7 @@ using UnityEngine;
 /// </summary>
 public abstract class BodyPartTargetedInteraction: TargetedInteraction
 {
-	private readonly GameObject targetObject;
 	private readonly BodyPartType targetBodyPart;
-
-	/// <summary>
-	/// Object that is targeted by the interaction
-	/// </summary>
-	public GameObject TargetObject => targetObject;
 
 	/// <summary>
 	/// Body part being targeted.
@@ -30,7 +24,6 @@ public abstract class BodyPartTargetedInteraction: TargetedInteraction
 	public BodyPartTargetedInteraction(GameObject performer, GameObject usedObject, GameObject targetObject, BodyPartType targetBodyPart, Intent intent) :
 		base(performer, usedObject, targetObject, intent)
 	{
-		this.targetObject = targetObject;
 		this.targetBodyPart = targetBodyPart;
 	}
 }

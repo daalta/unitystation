@@ -253,8 +253,8 @@ public class HydroponicsTray : ManagedNetworkBehaviour, IInteractable<HandApply>
 			}
 		}
 
-		showNutrimenetFlag = reagentContainer[nutriment] == null || reagentContainer[nutriment] < 25;
-		showWaterFlag = reagentContainer[water] == null || reagentContainer[water] < 25;
+		showNutrimenetFlag = reagentContainer[nutriment] < 25;
+		showWaterFlag = reagentContainer[water] < 25;
 		showWeedsFlag = weedLevel > 5;
 	}
 
@@ -373,7 +373,7 @@ public class HydroponicsTray : ManagedNetworkBehaviour, IInteractable<HandApply>
 			plantSprite.PushClear();
 			return;
 		}
-		
+
 		switch (plantCurrentStage)
 		{
 			case PlantSpriteStage.None:

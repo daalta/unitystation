@@ -39,9 +39,9 @@ namespace Chemistry.Components
 		[FormerlySerializedAs("reagentMix")]
 		[SerializeField] private ReagentMix initialReagentMix = new ReagentMix();
 		[SerializeField]
-		private bool destroyOnEmpty;
+		private bool destroyOnEmpty = true;
 
-		private ItemAttributesV2 itemAttributes;
+		private ItemAttributesV2 itemAttributes = null;
 		private RegisterTile registerTile;
 		private CustomNetTransform customNetTransform;
 		private Integrity integrity;

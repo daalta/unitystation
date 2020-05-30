@@ -21,7 +21,7 @@ public class GrownFood : NetworkBehaviour
 	[SerializeField]
 	private SpriteHandler Sprite;
 	[SerializeField]
-	private Edible edible;
+	private Edible edible = null;
 
 
 

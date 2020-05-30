@@ -21,7 +21,7 @@ public class WorldGateway : StationGateway
 	/// For world gate to world gate
 	/// </summary>
 	[SerializeField]
-	private bool ifWorldGateToWorldGate;
+	private bool ifWorldGateToWorldGate = false;
 
 	public override void OnStartServer()
 	{

@@ -32,18 +32,18 @@ namespace Chemistry.Components
 		[Tooltip("If not empty, another container should have one of this traits to interact")]
 		[FormerlySerializedAs("TraitWhitelist")]
 		[FormerlySerializedAs("AcceptedTraits")]
-		[SerializeField] private List<ItemTrait> traitWhitelist;
+		[SerializeField] private List<ItemTrait> traitWhitelist = null;
 
 		[Tooltip("If not empty, only listed reagents can be inside container")]
 		[FormerlySerializedAs("ReagentWhitelist")]
 		[FormerlySerializedAs("AcceptedReagents")]
-		[SerializeField] private List<Chemistry.Reagent> reagentWhitelist;
+		[SerializeField] private List<Chemistry.Reagent> reagentWhitelist = null;
 
 		[FormerlySerializedAs("TransferMode")]
 		[SerializeField] private TransferMode transferMode = TransferMode.Normal;
 
 		[FormerlySerializedAs("PossibleTransferAmounts")]
-		[SerializeField] private List<float> possibleTransferAmounts;
+		[SerializeField] private List<float> possibleTransferAmounts = null;
 
 		[Range(1, 100)]
 		[FormerlySerializedAs("TransferAmount")]

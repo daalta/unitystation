@@ -121,8 +121,8 @@ public abstract class NetUIElement<T> : NetUIElementBase
 	/// </summary>
 	protected virtual void UpdatePeepersLogic()
 	{
-		var masterTab = MasterTab;
-		TabUpdateMessage.SendToPeepers(masterTab.Provider, masterTab.Type, TabAction.Update, new[] {ElementValue});
+		var mt = MasterTab; // mt instead of masterTab to prevent naming conflict
+		TabUpdateMessage.SendToPeepers(mt.Provider, mt.Type, TabAction.Update, new[] {ElementValue});
 	}
 
 	public override void ExecuteServer(ConnectedPlayer subject){}
@@ -131,11 +131,11 @@ public abstract class NetUIElement<T> : NetUIElementBase
 		return ElementValue.ToString();
 	}
 
-	private class Wrapper<T>
+	private class Wrapper<T1>
 	{
-		public T Value;
+		public T1 Value;
 
-		public Wrapper(T value)
+		public Wrapper(T1 value)
 		{
 			Value = value;
 		}
