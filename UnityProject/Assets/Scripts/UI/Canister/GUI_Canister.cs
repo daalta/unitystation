@@ -101,7 +101,7 @@ public class GUI_Canister : NetTab
 	}
 
 
-	private new void OnEnable()
+	private void OnEnable()
 	{
 		base.OnEnable();
 		StartCoroutine(ClientWaitForProvider());
